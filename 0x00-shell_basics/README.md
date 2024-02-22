@@ -1,23 +1,100 @@
-Exercise 0: pwd === print working directory
-Exercise 1: ls === list directory contents
-Exercise 2: cd === change directory
-Exercise 3: ls -l === list directory contents in long form
-Exercise 4: ls -la === list directory contents in long form, including hidden files
-Exercise 5: ls -la Note: Are files inherently ordered?
-Exercise 6: mkdir /tmp/my_first_directory ===Create a my_first_directory directory inside the tmp directory
-Exercise 7: mv /tmp/betty /tmp/my_first_directory/betty ===Move file betty, which is located inside the tmp directory, to the my_first_directory directory, which is also located inside the tmp directory. This exercise required some dir traversing.
-Exercise 8: rm /tmp/my_first_directory/betty ===Remove file betty located in tmp/my_first_directory directory.
-Exercise 9: rm -r /tmp/my_first_directory ===Remove directory my_first_directory located in directory tmp.
-Exercise 10: cd - ====Change directory to the previous directory you were in.
-Exercise 11: ls -la . .. /boot ===List all files/directories, including hidden files/directories, from 3 separate directories: current directory, parent of working directory, and /boot directory. The ls command allows multiple directories to be listed separated by spaces.
-Exercise 12: file /tmp/iamafile  ===Prints the type of file iamafile.
-Exercise 13: ln -s /bin/ls _ls_  ===Create a symbolic link named ls for /bin/ls
-Exercise 14: cp -u *.html .. ===Copy all html files from the current directory to the parent directory, but only copy files that didn't exist in the parent directory or are newer versions than the ones that already exist in the parent directory. The -u option didn't show on the terminal manual page. The -u option copies the file into the directory if its a newer version. If the file doesn't exist in the directory, it will copy over. The -n option works for copying files that don't exist in the parent directory, but it doesn't check if the file is a newer version or not.
-Exercise 15: mv [[:upper:]]* /tmp/u ===Move all files that begin with a capital letter to /tmp/u
-Exercise 16: rm *~ ===Deletes all files in the current directory that end with a ~
-Exercise 17: mkdir -p welcome/to/school ====Create directory welcome in current directory. Create directory to inside directory welcome. Create directory holberton inside directory to. The -p option creates any intermediate directories in the path argument.
-Exercise 18: ls -map ==== List all files and directories of the current directory, separated by commas. Directory names should end with a /. The listing should be alph ordered, except for dot (.) or dot dot (..), which should be listed at the beginning. The -a option is to show any hidden files. The -p option writes a / at the end of directory names. The -m option streams the output, separating each listing with commas.
-Exercise 19: 0 string SCHOOL School data
- !:mime School
-Exit vi Create a magic file called school.mgc that can be used with the command file to detect SCHOOL data files. School data files always contain "SCHOOL" at offset 0.
-NOTE: Compiling a magic source file:  file -C -m school.mgc This produces the compiled magic file.  file -i -m school.mgc *
+### **Shell Basics**
+Task 
+
+0: Where am I?
+
+Write a script that prints the absolute path name of the current working directory.
+
+1. What’s in there?
+
+Display the contents list of your current directory.
+
+2. There is no place like home
+
+Write a script that changes the working directory to the user’s home directory
+
+3. The long format
+
+Display current directory contents in a long format.
+
+4. Hidden files
+
+Display current directory contents, including hidden files (starting with .). Use the long format.
+
+5. I love numbers
+
+Display current directory contents.
+
+Long format with user and group IDs displayed numerically
+And hidden files (starting with .)
+
+6. Welcome
+
+Create a script that creates a directory named my_first_directory in the /tmp/ directory.
+
+7. Betty in my first directory
+
+Move the file betty from /tmp/ to /tmp/my_first_directory.
+
+8. Bye bye Betty
+
+Delete the file betty.
+
+The file betty is in /tmp/my_first_directory
+
+9. Bye bye My first directory
+
+Delete the directory my_first_directory that is in the /tmp directory.
+
+10. Back to the future
+
+Write a script that changes the working directory to the previous one.
+
+11. Lists
+
+Write a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
+
+12. File type
+
+Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
+
+13. We are symbols, and inhabit symbols
+
+Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
+
+14. Copy HTML files
+
+Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+
+You can consider that all HTML files have the extension .html
+
+15. Let’s move
+
+Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u.
+
+16. Clean Emacs
+
+Create a script that deletes all files in the current working directory that end with the character ~.
+
+17. Tree
+
+Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
+
+You are only allowed to use two spaces (and lines) in your script, not more.
+
+18. Life is a series of commas, not periods
+
+Write a command that lists all the files and directories of the current directory, separated by commas (,).
+
+Directory names should end with a slash (/)
+Files and directories starting with a dot (.) should be listed
+The listing should be alpha ordered, except for the directories . and .. which should be listed at the very beginning
+Only digits and letters are used to sort; Digits should come first
+You can assume that all the files we will test with will have at least one letter or one digit
+The listing should end with a new line
+
+19. File type: School
+
+Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0.
+
+END OF PROJECT
